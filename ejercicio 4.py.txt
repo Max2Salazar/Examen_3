@@ -1,0 +1,12 @@
+#Escribir una clase en python que revierta una cadena de palabras
+#Entrada: "Mi Diario Python"
+#Salida: "Python Diario Mi"
+
+class Cad():
+    def __init__(self,cad):
+        self.cad=["Mi","Diario","Python"]
+    def resultado(self):
+        print self.cad[::-1]
+
+cad=Cad(0)
+cad.resultado()

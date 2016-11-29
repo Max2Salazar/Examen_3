@@ -1,0 +1,28 @@
+#Escribir una clase en python que convierta un número entero a número romano.
+
+class romano():
+    def __init__(self, num):
+        self.num=str(num)
+        self.num_rom=""
+
+    def convertir(self):
+        unidad={0:"", 1:"I", 2:"II", 3:"III", 4:"IV", 5:"V", 6:"VI", 7:"VII", 8:"VIII", 9:"IX"}
+        decena={10:"X", 20:"XX", 30:"XXX", 40:"XL", 50:"L", 60:"LX", 70:"LXX", 80:"LXXX", 90:"XC"}
+        centena={100:"C", 200:"CC", 300:"CCC", 400:"CD", 500:"D", 600:"DC", 700:"DCC", 800:"DCCC", 900:"CM", 1000:"M"}
+        cont=1
+
+        for i in range(len(self.num), 0, -1):
+            if cont == 1:
+                self.num_rom = unidad[int(self.num[i-1])]
+            elif cont == 2:
+                self.num_rom = decena[int(self.num[i-1])*10]+self.num_rom
+            elif cont == 3:
+                self.num_rom = centena[int(self.num[i-1])*100]+self.num_rom
+            cont +=1
+            
+    def mostrar(self):
+        print (self.num_rom)
+
+miromano=romano(1)
+miromano.convertir()
+miromano.mostrar()

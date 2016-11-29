@@ -1,0 +1,24 @@
+#Escribir una clase en python que encuentre los 3 elementos que sumen 0 a partir de números reales
+#Entrada: [-25, -10, -7, -3, 2, 4, 8, 10]
+#Salida: [[-10, 2, 8], [-7, -3, 10]]
+
+class Suma:
+    def __init__(self):
+        self.Entrada = [-25,-10,-7,-3,2,4,8,10]
+        self.Salida = ""
+        
+    def sumar(self):
+        for a in range(0,len(self.Entrada)):
+            num1 = self.Entrada[a] 
+            for b in range(a+1,len(self.Entrada)):
+                num2 = self.Entrada[b]
+                for c in range(b+1,len(self.Entrada)):
+                    num3 = self.Entrada[c]
+                    if num1+num2+num3 == 0:
+                        self.Salida = "["+str(num1)+", "+str(num2)+", "+str(num3)+"]"
+    def imprimir(self):
+        print self.Salida
+
+mostrarsuma=Suma()
+mostrarsuma.sumar()
+mostrarsuma.imprimir()

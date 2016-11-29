@@ -1,0 +1,35 @@
+#Escribir una clase en python que calcule pow(x, n)
+#x = es la base
+#n = es el exponente
+
+#Entrada: pow(2, -3)
+#Salida: 0.125
+
+#Entrada: pow(3, 5)
+#Salida: 234
+
+class Pot:
+    
+    def __init__(self,potencia):
+        self.potencia=potencia
+    def cal(self):
+        base=2
+        exponente=-3
+        self.potencia=pow(base,exponente)
+        print self.potencia
+
+mi_pow=Pot(0)
+mi_pow.cal()
+
+class Pot:
+    
+    def __init__(self,potencia):
+        self.potencia=potencia
+    def cal(self):
+        base=3
+        exponente=5
+        self.potencia=pow(base,exponente)
+        print self.potencia
+
+mi_pow=Pot(0)
+mi_pow.cal()
